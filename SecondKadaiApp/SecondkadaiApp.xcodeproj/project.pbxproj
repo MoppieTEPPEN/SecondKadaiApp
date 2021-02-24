@@ -61,11 +61,11 @@
 				FEDCDD6E25E4D93D00F43293 /* AppDelegate.swift */,
 				FEDCDD7025E4D93D00F43293 /* SceneDelegate.swift */,
 				FEDCDD7225E4D93D00F43293 /* ViewController.swift */,
+				FEDCDD8725E4EB2D00F43293 /* ResultViewController.swift */,
 				FEDCDD7425E4D93E00F43293 /* Main.storyboard */,
 				FEDCDD7725E4D94400F43293 /* Assets.xcassets */,
 				FEDCDD7925E4D94400F43293 /* LaunchScreen.storyboard */,
 				FEDCDD7C25E4D94400F43293 /* Info.plist */,
-				FEDCDD8725E4EB2D00F43293 /* ResultViewController.swift */,
 			);
 			path = SecondkadaiApp;
 			sourceTree = "<group>";

@@ -10,14 +10,17 @@ import UIKit
 class ResultViewController: UIViewController {
 
     
-    @IBOutlet weak var label: UILabel!
+ @IBOutlet weak var label: UILabel!
+    
+    
     
    var myname = ""
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-       
+        
+        
        let result = myname
         label.text = "こんにちは,\(result)さん"
         // Do any additional setup after loading the view.
