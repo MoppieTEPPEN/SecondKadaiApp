@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="ipad10_2" orientation="landscape" layout="fullscreen" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SecondkadaiApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="1080" height="810"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="名前を入力してください" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="i02-MI-oUE">
+                                <rect key="frame" x="0.0" y="30" width="1080" height="50"/>
+                                <color key="backgroundColor" systemColor="systemGrayColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="4S7-gC-g95"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="31"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fbo-5q-VeJ">
+                                <rect key="frame" x="503.5" y="350" width="73" height="55"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="36"/>
+                                <state key="normal" title="進む"/>
+                                <connections>
+                                    <segue destination="i5A-Eu-kjg" kind="show" id="Z96-fk-vFa"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="ここに入力してください" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wTt-oV-NLc">
+                                <rect key="frame" x="30" y="180" width="1020" height="70"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="wZD-jG-Xp7"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="wTt-oV-NLc" firstAttribute="top" secondItem="i02-MI-oUE" secondAttribute="bottom" constant="100" id="Dyp-Ww-dv8"/>
+                            <constraint firstItem="wTt-oV-NLc" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="XkL-Ma-FyN"/>
+                            <constraint firstItem="Fbo-5q-VeJ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="a4A-hT-3OV"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="i02-MI-oUE" secondAttribute="trailing" id="cB6-e6-u9a"/>
+                            <constraint firstItem="i02-MI-oUE" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="fMH-9E-2tY"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="wTt-oV-NLc" secondAttribute="trailing" constant="30" id="gzj-vN-0E7"/>
+                            <constraint firstItem="i02-MI-oUE" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="tNN-v2-fx5"/>
+                            <constraint firstItem="Fbo-5q-VeJ" firstAttribute="top" secondItem="wTt-oV-NLc" secondAttribute="bottom" constant="100" id="tdc-Dc-Er0"/>
+                            <constraint firstItem="i02-MI-oUE" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="wd3-ED-c7t"/>
+                            <constraint firstItem="wTt-oV-NLc" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="zgb-HO-lEa"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="nameText" destination="wTt-oV-NLc" id="QHm-hm-UcA"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="9" y="56"/>
+        </scene>
+        <!--Result View Controller-->
+        <scene sceneID="Zfj-gm-4tV">
+            <objects>
+                <viewController id="i5A-Eu-kjg" customClass="ResultViewController" customModule="SecondkadaiApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="KcN-pt-bwm">
+                        <rect key="frame" x="0.0" y="0.0" width="704" height="770"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="gfT-BG-WvF">
+                                <rect key="frame" x="0.0" y="30" width="704" height="50"/>
+                                <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="MSQ-48-KVJ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="33"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vbr-1Y-lWF">
+                                <rect key="frame" x="318.5" y="359" width="67" height="52"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="33"/>
+                                <state key="normal" title="戻る"/>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="tZX-Yd-2WZ"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="gfT-BG-WvF" firstAttribute="centerX" secondItem="Vbr-1Y-lWF" secondAttribute="centerX" id="EE7-te-5cH"/>
+                            <constraint firstItem="gfT-BG-WvF" firstAttribute="leading" secondItem="KcN-pt-bwm" secondAttribute="leading" id="Q5k-by-WBz"/>
+                            <constraint firstItem="Vbr-1Y-lWF" firstAttribute="centerX" secondItem="KcN-pt-bwm" secondAttribute="centerX" id="UWq-bA-FL9"/>
+                            <constraint firstItem="gfT-BG-WvF" firstAttribute="top" secondItem="tZX-Yd-2WZ" secondAttribute="top" constant="30" id="uAu-wp-vTY"/>
+                            <constraint firstItem="Vbr-1Y-lWF" firstAttribute="centerY" secondItem="KcN-pt-bwm" secondAttribute="centerY" id="yK2-Rk-MMA"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="V0q-Bf-cKY"/>
+                    <connections>
+                        <outlet property="label" destination="gfT-BG-WvF" id="wuI-Vc-5eb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0nV-r7-CtX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="657" y="56"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="opaqueSeparatorColor">
+            <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGrayColor">
+            <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
